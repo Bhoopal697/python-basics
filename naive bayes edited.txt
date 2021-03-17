@@ -1,0 +1,112 @@
+1) Prepare a classification model using Naive Bayes 
+for salary data 
+
+Data Description:
+
+age -- age of a person
+workclass	-- A work class is a grouping of work 
+education	-- Education of an individuals	
+maritalstatus -- Marital status of an individulas	
+occupation	 -- occupation of an individuals
+relationship -- 	
+race --  Race of an Individual
+sex --  Gender of an Individual
+capitalgain --  profit received from the sale of an investment	
+capitalloss	-- A decrease in the value of a capital asset
+hoursperweek -- number of hours work per week	
+native -- Native of an individual
+Salary -- salary of an individual
+
+
+#######Classification model using naive Bayes for salary data#############
+
+At first import all the important libraries.
+
+As given the data is divided into test and train which makes the problem easier.
+
+Load both the datasets.
+
+With string_cloumns converting all the columns into strings.
+
+Then import preprocessing library
+using labelEncoder coverting salary catgerical column into binary one 0"s and 1's
+
+age	workclass	education	educationno	maritalstatus	occupation	relationship	race	sex	capitalgain	capitalloss	hoursperweek	native	Salary
+0	8	2	1	6	4	6	3	2	1	0	0	39	37	0
+1	21	2	11	8	2	4	0	4	1	0	0	49	37	0
+2	11	1	7	11	2	10	0	4	1	0	0	39	37	1
+3	27	2	15	9	2	6	0	2	1	87	0	39	37	1
+4	17	2	0	5	4	7	1	4	1	0	0	29	37	0
+5	46	4	14	14	2	9	0	4	1	44	0	31	37	1
+6	7	2	15	9	4	7	4	4	0	0	0	39	37	0
+7	38	2	5	3	2	2	0	4	1	0	0	9	37	0
+8	48	2	11	8	2	6	0	4	1	77	0	39	37	1
+9	19	0	9	12	2	0	0	4	1	0	0	39	37	0
+
+As you can see the salary column is converted to 0's and 1's.
+
+Giving trainX ,trainY and textx, testy there values. In other words giving target and independent variables.
+
+ Use gaussianNB and Multinomial function we could find out confusion matrix and accuracy.
+
+At first for the gaussian
+
+Using spred_gnb as ahh class name fit(trainx,trainy) and predict(testx)
+we cwould get confusion matrix accuracy.
+Confusion matrix accuracy:
+  
+[[10506   854]
+ [ 1937  1763]]
+Accuracy 
+ 79.46879150066401
+
+Then for the multinomial
+
+Using spred_gnb as ahh class name fit(trainx,trainy) and predict(testx)
+we cwould get confusion matrix accuracy.
+
+Confusion MatriX Accuracy :
+  [[10631   729]
+ [ 2583  1117]]
+Accuracy 
+ 77.49667994687915
+
+With result as ahh class name create dataframe of spred_gnb(gaussian)
+
+let me show the first ten results.
+
+        0       
+0	0
+1	0
+2	0
+3	1
+4	0
+5	1
+6	0
+7	0
+8	1
+9	0
+10	0
+
+With result2 as ahh class name create dataframe of spread_mnb(multinomial)
+
+let me show the first ten results
+
+       0
+0	0
+1	0
+2	0
+3	1
+4	0
+5	1
+6	0
+7	0
+8	1
+9	0
+10	0
+
+Here 0 indicates <=50k and 1 indicates >50k.
+
+
+
+
